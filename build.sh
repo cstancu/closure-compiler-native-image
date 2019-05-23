@@ -8,4 +8,5 @@ native-image -H:+JNI --no-server \
     -H:IncludeResourceBundles=com.google.javascript.jscomp.parsing.ParserConfig \
     -H:ReflectionConfigurationFiles=reflection-config.json \
     -H:IncludeResources='(externs.zip)|(.*(js|txt))' \
+	--initialize-at-build-time \
     -jar closure-compiler.jar
